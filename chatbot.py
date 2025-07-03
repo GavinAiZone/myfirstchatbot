@@ -31,11 +31,11 @@ llm = ChatOpenAI(model = "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
 conversation = ConversationChain(memory=st.session_state.buffer_memory, llm=llm)
 
 # Create user interface
-st.title("🗣️ Conversational Chatbot")
-st.subheader("㈻ Simple Chat Interface for LLMs by Build Fast with AI")
+st.title("🗣️ Conversational Chatbot with Gavin")
+st.subheader("㈻ Simple Chat Interface for LLMs by Gavin with AI")
 
 
-if prompt := st.chat_input("Your question"): # Prompt for user input and save to chat history
+if prompt := st.chat_input("Type here Foo"): # Prompt for user input and save to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
 for message in st.session_state.messages: # Display the prior chat messages
